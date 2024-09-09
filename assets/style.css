@@ -1,0 +1,214 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Basic styling for other elements */
+body {
+    padding-top: 70px; /* Adjust this value based on the actual height of your header */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Ensure consistent font usage */
+}
+
+main {
+    padding: 20px;
+}
+
+header {
+    position: fixed; /* Fix position relative to the viewport */
+    top: 0; /* Align the top edge of the element with the viewport */
+    width: 100%; /* Make the header span the full width of the viewport */
+    background-color: #f4f4f4; /* Ensure the background is not transparent */
+    z-index: 1000; /* Ensure the header stays on top of other content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds shadow for better visibility over the content */
+    padding: 10px 20px; /* Padding for aesthetic spacing */
+}
+
+nav ul {
+    list-style-type: none; /* Removes default list styling */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center; /* Centers the navigation items */
+}
+
+nav li {
+    display: inline; /* Displays the list items inline */
+}
+
+nav a {
+    font-weight: bold; /* Makes text bold */
+    display: inline-block;
+    padding: 8px 15px; /* Padding around links for easier clicking */
+    text-decoration: none; /* Removes underline from links */
+    color: #333; /* Dark grey text, adjust color as needed */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    background-color: #ddd; /* Light grey background on hover, adjust color as needed */
+}
+
+
+.education-block {
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-left: 5px solid #005a9c; /* Georgia Tech colors for Master's degree */
+}
+
+.education-block h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.education-block ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.education-block ul li {
+    padding: 2px 0;
+    before {
+        content: "✔";
+        color: green;
+        padding-right: 10px;
+    }
+}
+
+/* Simple responsive tweaks */
+@media (max-width: 600px) {
+    body {
+        padding-top: 60px; /* Smaller padding for smaller devices if header is also smaller */
+    }
+}
+
+
+.project {
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    padding: 15px;
+    border-left: 5px solid #009688; /* Teal color for visual appeal */
+}
+
+.project h3 {
+    color: #333;
+}
+
+.project p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.project ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project ul li {
+    padding: 2px 0;
+    before {
+        content: "✓";
+        color: #009688; /* Matching the border color */
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        padding: 10px;
+    }
+}
+
+footer#contact {
+    background-color: #EEE8D5; /* An off-white color, similar to Georgia Tech's footer */
+    color: #333;
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.contact-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-details li {
+    padding: 10px 0;
+}
+
+.contact-details a {
+    color: #005a9c; /* Georgia Tech blue for links */
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.certification-item {
+    background-color: #f8f8f8; /* Light grey background for the section */
+    border-left: 5px solid #4CAF50; /* Green border for emphasis */
+    padding: 15px;
+    margin-bottom: 20px; /* Spacing between multiple certifications if you add more */
+}
+
+.certification-item h3 {
+    margin-top: 0;
+}
+
+.certification-item p {
+    font-size: 16px; /* Adjust size as needed */
+}
+
+.certification-item a {
+    color: #0056b3; /* Bright link color for visibility */
+    text-decoration: none; /* No underline to keep it clean */
+    font-weight: bold;
+}
+
+.certification-item a:hover {
+    text-decoration: underline; /* Underline on hover for better user interaction */
+}
+
+
+#home {
+    background-color: #fafafa; /* Soft background color */
+    padding: 40px 20px; /* Ample padding for readability and comfort */
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; /* Centers content horizontally */
+    text-align: left;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px; /* Max width for the content container */
+    margin: 0 auto; /* Centering the container */
+}
+
+.welcome-text {
+    flex: 1; /* Takes up 50% of the flex container */
+    padding-right: 20px; /* Spacing between text and image */
+}
+
+.welcome-image {
+    flex: 1; /* Takes up 50% of the flex container */
+    padding-left: 20px; /* Spacing between image and text */
+}
+
+.welcome-image img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Optional: adds rounded corners to the image */
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column; /* Stacks the items vertically on smaller screens */
+    }
+    .welcome-text, .welcome-image {
+        padding: 10px; /* Reduced padding on smaller screens */
+        flex: none; /* Takes full width */
+    }
+}
